@@ -15,3 +15,11 @@ formAddTodo.addEventListener("submit", (event) => {
     event.target.reset();
   }
 });
+
+todosContainer.addEventListener("click", (event) => {
+  const clicketElement = event.target;
+
+  if (Array.from(clicketElement.classList).includes("delete")) {
+    clicketElement.parentElement.remove();
+  }
+});
